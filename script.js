@@ -1,20 +1,25 @@
-let inicio = new Date()
+let prestamo = [
+  { nombre: "credito", precio: 0, categoria: "Nulo" },
+  { nombre: "credito", precio: 5000, categoria: "Chico" },
+  { nombre: "credito", precio: 10000, categoria: "mediano" },
+  { nombre: "credito", precio: 100000, categoria: "grande" }
+]
 
-console.log(Math.PI)
+let total = 0
 
-for (let i = 0; i < 1000; i++) {
-  console.log(i)  
+for (let i = 0; i < prestamo.length; i++) {
+  console.log(prestamo[i].precio)
+  total = total + prestamo[i].precio
+}
+console.log("El total es: ", total)
+console.log("------------")
+total = 0
+
+for (const prestamo of prestamo) {
+  console.log(prestamo.precio)
+  total = total + prestamo.precio
 }
 
-let fecha = new Date()
-console.log(fecha)
-console.log(fecha.toLocaleDateString())
-console.log(fecha.getDay())
-console.log(fecha.getDate())
-console.log(fecha.getMonth())
-
-let final = new Date()
-console.log("demoró ", final - inicio)
 let name = prompt("Ingrese su nombre")
 let apellido = prompt("Ingrese su apellido")
 let edad = prompt("Ingrese su edad")
