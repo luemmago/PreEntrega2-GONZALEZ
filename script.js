@@ -49,3 +49,28 @@ if (edad >= 18) {
 
     }
 } else { alert("Eres menor de edad, no puedes continuar") }
+
+
+productos.sort((a, b) => {
+  if (a.nombre < b.nombre) {
+    return 1
+  }
+  if (a.nombre > b.nombre) {
+    return -1
+  }
+  return 0
+})
+console.log(productos)
+
+//REDUCE
+let CantidadDeCuotas = precio.reduce((acum, pre) => acum +  mon.precio, 0)
+console.log(costoTotalProductos)
+
+//FILTER
+let MontoASolicitar = precio.filter((precio) => precio.MontoASolicitar > 3000 && precio.categoria === "credito")
+console.log(MontoASolicitar)
+// respuesta pruede ser [] o [{...}] o [{...}, {...}, {...}]
+
+//FIND
+let montobuscado = nombre.find(precio => nombre.id === 2)
+console.log(montobuscado)
