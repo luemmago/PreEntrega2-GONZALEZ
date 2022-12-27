@@ -1,25 +1,3 @@
-let prestamo = [
-    { nombre: "credito", precio: 0, categoria: "Nulo" },
-    { nombre: "credito", precio: 5000, categoria: "Chico" },
-    { nombre: "credito", precio: 10000, categoria: "mediano" },
-    { nombre: "credito", precio: 100000, categoria: "grande" }
-]
-
-let total = 0
-
-for (let i = 0; i < prestamo.length; i++) {
-    console.log(prestamo[i].precio)
-    total = total + prestamo[i].precio
-}
-console.log("El total es: ", total)
-console.log("------------")
-total = 0
-
-for (const prestamo of prestamo) {
-    console.log(prestamo.precio)
-    total = total + prestamo.precio
-}
-
 let name = prompt("Ingrese su nombre")
 let apellido = prompt("Ingrese su apellido")
 let edad = prompt("Ingrese su edad")
