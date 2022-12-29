@@ -2,7 +2,7 @@ let productos = [
     { id: 2, nombre: "Pelota Mundial CATAR 2022", stock: 30, precio: 19999, imgUrl: "" },
     { id: 5, nombre: "Camiseta Argentina con 3 estrellas mas logo de campeon del mundo", stock: 10, precio: 30000, imgUrl: "" },
     { id: 8, nombre: "Camiseta Argentina con 2 estrellas", stock: 34, precio: 23000, imgUrl: "" },
-    { id: 9, nombre: "BORDADO DE LA 3ERA ESTRELLA MAS NUMERO DE JUGADOR A ELEGIR", stock: Infinito, precio: 6000, imgUrl: "" }
+    { id: 9, nombre: "Bordado de la 3era estrella mas la insignia del campeon", stock: 0, precio: 6000, imgUrl: "" },
 ]
 
 let contenedor = document.getElementById("contenedorProductos")
