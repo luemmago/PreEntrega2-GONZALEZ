@@ -1,29 +1,25 @@
-let name = prompt("Ingrese su nombre")
-let apellido = prompt("Ingrese su apellido")
-let edad = prompt("Ingrese su edad")
-alert("Su nombre completo es " + name + " " + apellido)
-if (edad >= 18) {
-    alert("El Costo Financiero Total es del 75%")
-    let MontoASolicitar = Number(prompt("ingrese monto a solicitar"))
-    let MontoAPagar = MontoASolicitar * 1.75
-    let CantidadDeCuotas = Number(prompt("Ingrese el numero de cuotas que desea pagar su préstamo personal"))
-
-    alert("Monto a solicitar: " + MontoASolicitar + "\n" + "Interes por financiacion: " + "\n" + "Monto total financiado: " + MontoAPagar.toFixed(2) + "\n" + "En Cantidad de cuotas: " + CantidadDeCuotas + "\n" + "Monto de cada cuota: " + (MontoAPagar / CantidadDeCuotas).toFixed(2))
-
-    let opcion = Number(prompt("Ingrese 1 para aceptar el préstamo \n ingrese 2 para calcular de nuevo \n ingrese 0 para salir"))
-    if (opcion == 0) { alert("GRACIAS POR VISITARNOS, VUELVE PRONTO") }
-    while (opcion != 0) {
-        if (opcion == 1) {
-            alert("Su préstamo fue aprobado con éxito, disfrute de su dinero")
-        } else if (opcion == 2) {
-            let MontoASolicitar = Number(prompt("ingrese monto a solicitar"))
-            let MontoAPagar = MontoASolicitar * 1.75
-            let CantidadDeCuotas = Number(prompt("Ingrese el numero de cuotas que desea pagar su préstamo personal"))
-
-            alert("Monto a solicitar: " + MontoASolicitar + "\n" + "Interes por financiacion: " + "\n" + "Monto total financiado: " + MontoAPagar.toFixed(2) + "\n" + "En Cantidad de cuotas: " + CantidadDeCuotas + "\n" + "Monto de cada cuota: " + (MontoAPagar / CantidadDeCuotas).toFixed(2))
-
-
-        }
-
-    }
-} else { alert("Eres menor de edad, no puedes continuar") }
+let productos = [
+    { id: 2, nombre: "Pelota Mundial CATAR 2022", stock: 30, precio: 19999, imgUrl: "https://ep01.epimg.net/verne/imagenes/2015/09/11/articulo/1441988783_165642_1442161238_sumario_normal.jpg" },
+    { id: 5, nombre: "Camiseta Argentina con 3 estrellas mas logo de campeon del mundo", stock: 10, precio: 30000, imgUrl: "https://cuestablanca.vteximg.com.br/arquivos/ids/360383-1000-1500/remera-manga-corta-negro-6.jpg?v=637801799314600000" },
+    { id: 8, nombre: "Camiseta Argentina con 2 estrellas", stock: 34, precio: 23000, imgUrl: "./images/short.jpg" },
+    { id: 9, nombre: "BORDADO DE LA 3ERA ESTRELLA MAS NUMERO DE JUGADOR A ELEGIR", stock: S/N, precio: 6000, imgUrl: "https://http2.mlstatic.com/D_NQ_NP_842761-MLA45601779395_042021-W.jpg" }
+  ]
+  
+  let contenedor = document.getElementById("contenedorProductos")
+  
+  for (const producto of productos) {
+    let tarjetaProducto = document.createElement("div")
+    tarjetaProducto.className = "producto"
+    tarjetaProducto.id = producto.id
+  
+    tarjetaProducto.innerHTML = `
+      <h3>${producto.nombre}</h3>
+      <p>Quedan ${producto.stock} u.</p>
+      <p>Cuesta $${producto.precio}</p>
+      <img src=${producto.imgUrl}>
+      <button>Añadir al carrito</button>
+    `
+  
+    contenedor.appendChild(tarjetaProducto)
+  }
+  
