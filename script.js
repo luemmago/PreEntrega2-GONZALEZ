@@ -73,3 +73,23 @@ function renderizarCarrito(arrayDeProductos) {
   `
 }
 
+let botonComprar = document.getElementById("comprar")
+botonComprar.addEventListener("click", () => {
+  localStorage.removeItem("carrito")
+  carrito = []
+  renderizarCarrito(carrito)
+})
+
+let arrayProductos = [{nombre: "Pelota", nombre: "Remera"}]
+let granString = JSON.stringify(arrayProductos)
+'[{"nombre": "Pelota", "nombre": "Remera"}]'
+JSON.parse(granString)
+[{nombre: "Pelota", nombre: "Remera"}]
+
+let productosEnString = JSON.stringify(productos)
+localStorage.setItem("productos", productosEnString)
+
+let productosRecuperadosEnString = localStorage.getItem("productos")
+let productosRecuperados = JSON.parse(productosRecuperadosEnString)
+console.log(productosRecuperados)
+
